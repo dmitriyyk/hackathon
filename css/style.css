@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Geologica", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: black; 
+}
+
+.page {
+  overflow-y: auto;
+  overflow-x: hidden;
+  color: aliceblue;
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+}
+
+.page section {
+  scroll-snap-align: start;
+}
+
+.page-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 15px 15px;
+  height: inherit;
+}
+
+.title {
+  font-weight: 200;
+} 
+
+/* Адаптив */
+
+
+
+/* Анимации секций */
+
+.main-section .animate-left {
+  opacity: 0;
+  transform: translateY(-50%);
+  transition: 1s all ease;
+}
+
+.main-section.show-animate .animate-left {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+.main-section .animate-right {
+  opacity: 0;
+  transform: translateX(20%);
+  transition: 1s all ease;
+}
+
+.main-section.show-animate .animate-right {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+
+
+/* Шапка сайта */
+
+.header {
+  /* background-color: rgba(91, 91, 91, 0.5); */
+  position: fixed;
+  inset-inline: 0;
+  backdrop-filter: blur(30px);
+  height: 80px;
+  z-index: 900;
+}
+
+.header__inner {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.header__inner a {
+  color: rgb(255, 255, 255);
+}
+
+.header__inner a:hover {
+  opacity: 0.8;
+}
+
+.logo {
+  height: 100%;
+  width: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.logo__title {
+  font-family: "Geometric";
+  font-size: 30px;
+  color: rgb(96 124 214);
+}
+
+.logo__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  height: inherit;
+  transition: 0.2s all ease;
+}
+
+.logo__link:hover {
+  opacity: 0.8;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__list {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  column-gap: 15px;
+}
+
+.nav__link, .account__link, .logo__link {
+  text-decoration: none;
+}
+
+.header__content {
+  display: flex;
+  column-gap: 30px;
+}
+
+section {
+  /* height: 100vh; */
+}
+
+/* Главный экран */
+
+@keyframes gradientRotate {
+  0% {
+    filter: hue-rotate(90deg);
+    transform: rotate(0deg);
+  };
+  100% {
+    filter: hue-rotate(360deg);
+    transform: rotate(360deg);
+  };
+}
+
+.main-section {
+  height: 100dvh;
+  width: 100%;
+  background: rgb(0,11,145);
+  background: linear-gradient(45deg, rgba(0,11,145,1) 0%, rgba(0,0,0,1) 35%, rgba(0,0,0,1) 60%, rgba(0,212,255,1) 100%);
+  animation: gradientRotate 4.2s infinite alternate;
+}
+
+
+.main-section__inner {
+  display: flex;
+  height: inherit;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-section__left {
+  width: 40%;
+}
+
+.main-section__title {
+  text-transform: uppercase;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.main-section__text {
+  margin-bottom: 10px;
+}
+
+.main-section__btn {
+  display: inline-block;
+  padding: 10px 10px;
+  background-color: aliceblue;
+  text-decoration: none;
+  color: black;
+}
+
+/* Секция описания */
+
+.description {
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 63%, rgba(0,0,0,0) 100%);
+  height: 100vh;
+  width: 100%;
+}
+
+.description__inner {
+  padding: 100px 0;
+}
+
+/* Секция преимуществ */
+
+.advantages {
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 63%, rgba(0,0,0,0) 100%);
+  height: 100vh;
+  width: 100%;
+}
+
+.advantages__inner {
+  padding: 100px 0;
+}
