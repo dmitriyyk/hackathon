@@ -9,7 +9,7 @@ window.addEventListener('load', () => {
 
 scrollContainer.addEventListener('scroll', () => {
   scrollItems.forEach((item) => {
-    const isInViewport = item.getBoundingClientRect().top >= 0 && item.getBoundingClientRect().top <= window.innerHeight - 100;
+    const isInViewport = item.getBoundingClientRect().top >= 0 && item.getBoundingClientRect().top <= window.innerHeight - 150;
 
     if (isInViewport) {
       item.classList.add('show-animate');
