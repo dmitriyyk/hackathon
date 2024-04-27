@@ -596,6 +596,34 @@ p {
   border-radius: 10px;
 }
 
+/* Секция поведения робота */
+
+.how-work {
+  height: 100vh;
+}
+
+.how-work__inner {
+  scrollbar-width: none;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  overflow-y: auto;
+  padding: 100px 0;
+  height: 100vh;
+  padding-bottom: 100px;
+}
+
+.how-work__img {
+  width: 80%;
+}
+
+.how-work__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* Секция характеристик */
 
 .сharacteristics {
