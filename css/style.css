@@ -455,7 +455,7 @@ p {
 .description__img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /* Секция преимуществ */
@@ -512,10 +512,10 @@ p {
 }
 
 .advantages__img img {
-  text-align: center;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  aspect-ratio: 1/1;
+  max-width: 150px;
+  max-height: 150px;
+  object-fit: contain;
 }
 
 .advantages__elem p {
@@ -626,31 +626,38 @@ p {
 
 /* Секция характеристик */
 
-.сharacteristics {
+.how-work {
   height: 100vh;
+}
+
+.how-work__inner {
+  scrollbar-width: none;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  overflow-y: auto;
+  padding: 100px 0;
+  padding-bottom: 100px;
+  flex-wrap: wrap; /* add this */
   width: 100%;
 }
 
-.сharacteristics__inner {
-  scrollbar-width: none;
-  overflow-y: auto;
-  padding: 100px 0;
-  height: 100vh;
+.how-work__img {
+  max-width: 80%; /* add this */
 }
 
-.characteristics__elem {
+.how-work__img img {
+  width: 100%;
+  height: auto; /* change from height: 100% to auto */
+  object-fit: contain; /* change from cover to contain */
+}
+
+.how-work__item {
   display: flex;
-  gap: 25px;
-  margin-bottom: 5px;
-}
-
-.characteristics__elem-title {
-  width: 20%;
-  font-weight: 200;
-}
-
-.characteristics__elem-text {
-  width: 60%;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 /* Секция "В разработке" */
